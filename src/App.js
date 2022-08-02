@@ -1,5 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
+
+Amplify.configure(awsconfig);
+
+// >>New - Configuring Auth Module
+Auth.configure(awsconfig);
 
 function App() {
   return (
